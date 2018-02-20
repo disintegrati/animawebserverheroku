@@ -34,6 +34,6 @@ wss.on('connection', (ws) => {
 });
 
 //setInterval(function(){ wss.broadcast('request'); }, 1783);
-setInterval(function(){ wss.broadcast('request'); }, 1000);
+setInterval(function(){ wss.broadcast('request'); }, 20000);
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
