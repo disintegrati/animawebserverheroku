@@ -24,7 +24,7 @@ const INDEX = path.join(__dirname, 'public', 'index.html');
 
 app.get('/', (req, res) => {
   res.sendFile(INDEX);
-  wss.broadcast('request');
+//  wss.broadcast('request');
 });
 
 wss.on('connection', (ws) => {
