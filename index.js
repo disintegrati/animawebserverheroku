@@ -34,7 +34,7 @@ wss.on('connection', (ws) => {
   ws.on('close', () => console.log('Client disconnected'));
 });
 
-setInterval(function(){ wss.broadcast('request'); }, 1783 * 10);
+setInterval(function(){ wss.broadcast('request'); }, 1783 * 2);
 //setInterval(function(){ wss.broadcast('request'); }, 30000);
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
