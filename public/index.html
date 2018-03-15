@@ -3,11 +3,11 @@
    <head>
       <title>Anima WebServer</title>
    </head>
-   <!--<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>-->
-   <script src="/socket.io/socket.io.js"></script>
+   <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+
    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 <script>
-    var socket = io();
+    var socket = io.connect();
     socket.on('request', beat);
     function beat() {
       element = document.getElementById("cover");
