@@ -7,7 +7,7 @@
 
 
 <script>
-    var socket = io.connect('https://ininfluent.herokuapp.com/ws');
+    var socket = io.connect('https://ininfluent.herokuapp.com/ws/');
     socket.on('request', beat);
     function beat() {
       element = document.getElementById("cover");
