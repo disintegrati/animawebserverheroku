@@ -7,8 +7,18 @@
 
 
 <script>
-    var socket = io.connect('https://ininfluent.herokuapp.com/ws/');
-    socket.on('request', beat);
+//    var socket = io.connect('https://ininfluent.herokuapp.com/ws/');
+//    socket.on('request', beat);
+
+var HOST = location.origin.replace(/^http/, 'ws')
+var ws = new WebSocket(HOST);
+
+
+ws.onmessage = function (event) {
+beat();
+};
+
+
     function beat() {
       element = document.getElementById("cover");
       element.classList.remove("beat");
