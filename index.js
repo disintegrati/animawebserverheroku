@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 
 wss.on('connection', (ws) => {
   console.log('Client connected!');
+  ws.on('message'), function incoming(data) { console.log(data); });
   ws.on('close', () => console.log('Client disconnected'));
 });
 
