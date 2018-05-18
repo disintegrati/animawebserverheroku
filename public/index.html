@@ -136,6 +136,7 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;
 text-align: center;
 text-transform: uppercase;
 font-weight: 700;
+opacity: 1;
 
   }
   .child {
@@ -154,7 +155,14 @@ font-weight: 700;
     font-size: 4.1em;
   }
 
+.hidden {opacity: 0;
 
+  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
 @media only screen and (max-width: 768px) {
   .heading .child h3 {
     font-size: 1.3em;
@@ -183,7 +191,7 @@ font-weight: 700;
 
 
 $( "html" ).click(function() {
-  $( ".heading" ).toggle( "slow");
+  $( ".heading" ).toggleClass( "hidden");
 });
 
 </script>
