@@ -180,10 +180,13 @@ font-weight: 700;
 
 
 <script type="text/javascript">
-$("html").click(function(){
-  $(".heading").toggleClass("hidden");
 
-})
+
+$( "html" ).click(function() {
+  $( ".hidden" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+});
 
 </script>
 
