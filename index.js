@@ -28,6 +28,9 @@ app.get('/', (req, res) => {
 //  wss.broadcast('request');
 });
 
+
+app.use(express.static('public'));
+
 wss.on('connection', (ws) => {
   console.log('Client connected!');
 //  wss.on('message'), function incoming(data) { console.log(data); });
