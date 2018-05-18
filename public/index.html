@@ -116,13 +116,30 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;
      opacity:0;
       }
 }
+
+  .heading {
+    position: relative;
+  }
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   </style>
   <title>Battito</title>
 </head>
 
 <body>
-  <div id="cover">
-  </div>
+  <div id="cover"></div>
+    <div class="heading">
+      <div class="child">
+      <h3>Questo è il battito di</h3>
+      <h1>#CUOREDINAPOLI</h1>
+    </div>
+    </div>
+
 </body>
 
 </html>
