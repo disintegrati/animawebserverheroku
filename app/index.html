@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+  body{
+    background-color:black;
+  }
+
+  #logo{
+    z-index: 1;
+    position:fixed;
+    left:50%;
+    bottom: 34px;
+    transform: translate(-50%);
+    width: 100px;
+  }
+
+  #battito{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -50%);
+    width: 200px;
+  }
+  
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .beat {
+      background-color:#ed1f24;;
+      animation: heartbeat 2000ms ease-in-out 0s normal;
+  }
+
+  @keyframes heartbeat {
+      7.46% {
+        opacity: 1;
+      }
+      14.17% {
+        opacity: 0;
+      }
+      25.36% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #cover{
+      position: fixed;
+      width:100vw;
+      height:100vh;
+      top:0;
+      left:0;
+      z-index:0;
+    }
+  </style>
+
+  <!-- include es5-shim and es5-shim when support for older browsers is needed -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.23.0/es6-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/timesync/timesync.js"></script>
+
+  <script>
+    // create a timesync client
+    var ts = timesync.create({
+      server: '/timesync',
+      interval: 1000
+    });
+
+    // get notified on changes in the offset
+    ts.on('change', function (offset) {
+      //console.log('changed offset: ' + offset + ' ms');
+    });
+    
+    
+
+    // get synchronized time  
+    setInterval(function () {
+      var now = new Date(ts.now());
+      //var nowClient = new Date(Date.now());
+      //console.log('now: ' + now.toISOString() + ' ms');
+      //$('#dataServer').text('Server time: ' + now.toUTCString() + ' ms');
+      if(now.getSeconds()%3!=0){
+        $('#cover').addClass('beat');
+      }
+      else{
+        $('#cover').removeClass('beat');
+      }
+      //$('#data').text('Client time: ' + nowClient.toUTCString() + ' ms');
+    }, 1);
+
+  </script>
+</head>
+<body>
+  <div id="cover"></div>
+  <div id="battito"><img src="img/battito.png"></div>
+  <div id="logo"><img src="img/logo.png"></div>
+</body>
+</html>
