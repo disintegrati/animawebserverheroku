@@ -1,7 +1,7 @@
 var express = require('express');
 var timesyncServer = require('../server');
 
-var PORT = 8080;
+var PORT = 80;
 
 // create an express app
 var app = express();
