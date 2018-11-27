@@ -1,7 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body{
+  background-color:black;
   font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary{
+  background-color:#c9151f;
+  box-shadow: none!important;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color:white;
+  box-shadow: none!important;
+  color: #c9151f;
+  border: none;
+}
+
+.btn-secondary{
+  box-shadow: none;
+  border: none;
+}
+
+
+#logo{
+  z-index: 1;
+  position:fixed;
+  left:50%;
+  top: 5%;
+  transform: translate(-50%);
+  width: 50px;
+}
+
+#battito{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 #share{
@@ -40,4 +77,18 @@ img{
     100% {
       opacity: 0;
     }
+  }
+
+  #cover{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+
+  .modal-header {
+    color: white;
+    background-color: #c9151f;
   }
