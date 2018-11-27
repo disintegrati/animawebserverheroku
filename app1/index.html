@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" src="style.css">
+
+  <!-- include es5-shim and es5-shim when support for older browsers is needed -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.23.0/es6-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/timesync/timesync.js"></script>
+</head>
+<body>
+  <div id="cover"></div>
+  <div id="battito"><img src="img/battito.png"></div>
+  <div id="logo"><img src="img/logo.png"></div>
+  <div id="counter"></div>
+  
+  <script>
+    // create a timesync client
+    var ts = timesync.create({
+      server: '/timesync',
+      interval: 10000
+    });
+
+    // get notified on changes in the offset
+    ts.on('change', function (offset) {
+      console.log('changed offset: ' + offset + ' ms');
+    });
+    
+    
+
+    //get synchronized time  
+    setInterval(function () {
+      var now = new Date(ts.now());
+      var battiti = Math.floor((( ts.now() - 1543243797977)/1000)/3); 
+      $('#counter').html('battiti: ' + battiti);
+      if(now.getSeconds()%3!=0){
+        $('#cover').addClass('beat');
+      }
+      else{
+        $('#cover').removeClass('beat');
+      }
+    }, 1);
+  </script>
+</body>
+
+</html>
