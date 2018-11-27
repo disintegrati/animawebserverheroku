@@ -1,94 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-body{
-  background-color:black;
-  font-family: 'Montserrat', sans-serif;
+body {
+	background-color: black;
+	font-family: 'Montserrat', sans-serif;
 }
-
-.btn-primary{
-  background-color:#c9151f;
-  box-shadow: none!important;
-  border: none;
+#battito {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
 }
-
-.btn-primary:hover{
-  background-color:white;
-  box-shadow: none!important;
-  color: #c9151f;
-  border: none;
+#share {
+	position: fixed;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%);
+	color: white;
+	text-align: center;
 }
-
-.btn-secondary{
-  box-shadow: none;
-  border: none;
+#social-icons {
+	text-align: center;
 }
-
-
-#logo{
-  z-index: 1;
-  position:fixed;
-  left:50%;
-  top: 5%;
-  transform: translate(-50%);
-  width: 50px;
+img {
+	max-width: 100%;
+	max-height: 100%;
 }
-
-#battito{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-#share{
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%);
-  color: white;
-  text-align: center;
-}
-
-#social-icons{
-  text-align:center;
-}
-
-img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .beat {
-    background-color:#ed1f24;;
-    animation: heartbeat 2000ms ease-in-out 0s normal;
+	background-color: #ed1f24;
+	;
+	animation: heartbeat 2000ms ease-in-out 0s normal;
 }
-
-@keyframes heartbeat {
-    7.46% {
-      opacity: 1;
-    }
-    14.17% {
-      opacity: 0;
-    }
-    25.36% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  #cover{
-    position: fixed;
-    width:100vw;
-    height:100vh;
-    top:0;
-    left:0;
-    z-index:-1;
-  }
-
-  .modal-header {
-    color: white;
-    background-color: #c9151f;
-  }
+ @keyframes heartbeat {
+ 7.46% {
+ opacity: 1;
+}
+ 14.17% {
+ opacity: 0;
+}
+ 25.36% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+}
+}
+#cover {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
@@ -13,7 +12,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/timesync/timesync.js"></script>
-
   <script>
     // create a timesync client
     var ts = timesync.create({
@@ -41,55 +39,31 @@
       }
     }, 1);
   </script>
-</head>
+  </head>
 
-<body>
-  <!-- Button trigger modal -->
-  <!-- <button id="marazia" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <body>
+<!-- Button trigger modal --> 
+<!-- <button id="marazia" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
     Regala un battito #CUOREDINAPOLI
-  </button> -->
+  </button> --> 
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-
+    <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Regala un battito #CUOREDINAPOLI</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Regala un battito #CUOREDINAPOLI</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
       </div>
-
         <div class="modal-body">
-          <div class="row">
-            
-          </div>
-        </div>
+        <div class="row"> </div>
       </div>
-    </div>
+      </div>
   </div>
-
-  <div id="cover"></div>
-
-  <div id="logo"><img src="img/logo.png"></div>
-
-  <div id="battito">
+  </div>
+<div id="cover"></div>
+<div id="battito">
     <h2>#<span id="counter"></span></h2>
   </div>
-
-  <div id="share">
-    <p>Regala un battito:</p>
-    <div id="social-icons">
-      <a href="https://it-it.facebook.com/hashtagcuoredinapoli/"><img src="img/FB.svg" width="30px"></a>
-      <img src="img/IG.svg" width="30px">
-      <img src="img/WA.svg" width="30px">
-      <img src="img/TW.svg" width="30px">
-      <img src="img/link-symbol.svg" width="20px">
-    </div>
-  </div>
-  
-
-
 </body>
 </html>
