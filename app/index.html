@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-
-  <!-- include es5-shim and es5-shim when support for older browsers is needed -->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.23.0/es6-shim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,14 +15,10 @@
       server: '/timesync',
       interval: 10000
     });
-
     // get notified on changes in the offset
     ts.on('change', function (offset) {
       console.log('changed offset: ' + offset + ' ms');
     });
-    
-    
-
     //get synchronized time  
     setInterval(function () {
       var now = new Date(ts.now());
@@ -49,30 +42,10 @@
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v3.2';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> 
-<!-- Button trigger modal --> 
-<!-- <button id="marazia" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Regala un battito #CUOREDINAPOLI
-  </button> --> 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Regala un battito #CUOREDINAPOLI</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-      </div>
-        <div class="modal-body">
-        <div class="row"> </div>
-      </div>
-      </div>
-  </div>
-  </div>
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="cover"></div>
 <div id="battito">
     <h2>#<span id="counter"></span></h2>
   </div>
-	  <div class="fb-share-button" data-href="https://www.cuoredinapoli.net/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cuoredinapoli.net%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Condividi un battito</a></div>
 </body>
 </html>
