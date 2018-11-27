@@ -1,3 +1,6 @@
+html, body {
+	background-color: black;
+}
 #battito {
 	position: fixed;
 	top: 50%;
