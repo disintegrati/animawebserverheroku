@@ -2,6 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+
+
+    <meta property="fb:app_id" content="575939839496604" />
+    <meta property="og:url" content="http://battito.cuoredinapoli.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Battito del #CUOREDINAPOLI">
+    <meta property="og:description" content="Sto dedicando il battito n.">
+    <meta property="og:image" content="img/fb.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
@@ -9,6 +21,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/timesync/timesync.js"></script>
+
+
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '575939839496604',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/it_IT/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
     <script>
 // create a timesync client
     var ts = timesync.create({
@@ -32,6 +68,26 @@
       $("#donotwit").attr('href', twittCompleteUrl);
       $("#donofb").attr('href', fbCompleteUrl);
       $("#donowa").attr('href', waCompleteUrl);
+
+        var overrideDescription = "'Sto dedicando il battito n. '+ battiti";
+
+        function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
+{
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+            object: {        
+                'og:description': overrideDescription
+            }
+        })
+    },
+    function (response) {
+    // Action after response
+    });
+}
+
+
 
       if(now.getSeconds()%3!=0){
         $('#cover').addClass('beat');
