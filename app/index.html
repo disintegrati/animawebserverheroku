@@ -22,6 +22,9 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/timesync/timesync.js"></script>
     <script>
+
+var overTitle;
+
         $(document).ready(function() {
         window.fbAsyncInit = function() {
     FB.init({
@@ -57,7 +60,7 @@ $("#donofb").click(function() {
     <script>
 
 
-    var overTitle;
+
     // create a timesync client
     var ts = timesync.create({
       server: '/timesync',
