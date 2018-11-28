@@ -8,7 +8,7 @@ var app = express();
 app.listen(PORT);
 console.log('Server listening at http://localhost:' + PORT);
 
-// serve static index.html
+// serve static pages
 app.get('/', express.static(__dirname));
 app.get('/index.html', express.static(__dirname));
 app.get('/privacy.html', express.static(__dirname));
