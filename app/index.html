@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Battito del #CUOREDINAPOLI">
     <meta property="og:description" content="Dedicalo anche tu a chi vuoi!">
-    <meta property="og:image" content="img/fb.jpg">
+    <meta property="og:image" content="http://battito.cuoredinapoli.net/img/fb.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
 
@@ -24,6 +24,9 @@
     <script>
 
 var overTitle;
+var overLink = "http://battito.cuoredinapoli.net";
+var overDesc = "Dedicalo anche tu a chi vuoi!";
+var overrImg = "http://battito.cuoredinapoli.net/img/fb.jpg";
 
         $(document).ready(function() {
         window.fbAsyncInit = function() {
@@ -50,7 +53,7 @@ var overTitle;
 
 $("#donofb").click(function() {
 
-  shareOverrideOGMeta(overTitle);
+  shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg)
 });
 
          });
@@ -132,22 +135,23 @@ $("#donofb").click(function() {
 
 
 <script>
-function shareOverrideOGMeta(overrideTitle)
+function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
 {
-    FB.ui({
-        method: 'share_open_graph',
-        action_type: 'og.likes',
-        action_properties: JSON.stringify({
-            object: {
-
-                'og:title': overrideTitle
-
-            }
-        })
-    },
-    function (response) {
-    // Action after response
-    });
+	FB.ui({
+		method: 'share_open_graph',
+		action_type: 'og.likes',
+		action_properties: JSON.stringify({
+			object: {
+				'og:url': overrideLink,
+				'og:title': overrideTitle,
+				'og:description': overrideDescription,
+				'og:image': overrideImage
+			}
+		})
+	},
+	function (response) {
+	// Action after response
+	});
 }
 </script>
 </body>
