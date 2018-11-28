@@ -11,6 +11,7 @@ console.log('Server listening at http://localhost:' + PORT);
 // serve static index.html
 app.get('/', express.static(__dirname));
 app.get('/index.html', express.static(__dirname));
+app.get('/privacy.html', express.static(__dirname));
 
 
 var publicDir = require('path').join(__dirname);
