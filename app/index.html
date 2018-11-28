@@ -42,23 +42,7 @@
    }(document, 'script', 'facebook-jssdk'));
 
 
-   function shareOverrideOGMeta(overrideTitle)
-   {
-       FB.ui({
-           method: 'share_open_graph',
-           action_type: 'og.likes',
-           action_properties: JSON.stringify({
-               object: {
 
-                   'og:title': overrideTitle
-
-               }
-           })
-       },
-       function (response) {
-       // Action after response
-       });
-   }
 
 
 
@@ -138,6 +122,24 @@
     </div>
 
 
+<script>
+function shareOverrideOGMeta(overrideTitle)
+{
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.likes',
+        action_properties: JSON.stringify({
+            object: {
 
+                'og:title': overrideTitle
+
+            }
+        })
+    },
+    function (response) {
+    // Action after response
+    });
+}
+</script>
 </body>
 </html>
