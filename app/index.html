@@ -22,7 +22,8 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/timesync/timesync.js"></script>
     <script>
-  window.fbAsyncInit = function() {
+        $(document).ready(function() {
+        window.fbAsyncInit = function() {
     FB.init({
       appId            : '575939839496604',
       autoLogAppEvents : true,
@@ -39,6 +40,8 @@
      js.src = "//connect.facebook.net/it_IT/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+        });
+
     </script>
 
     <script>
