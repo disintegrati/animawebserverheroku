@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.23.0/es6-shim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/timesync/timesync.js"></script>
+<!-- saved from url=(0033)http://battito.cuoredinapoli.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="./battito.cuoredinapoli.net_files/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./battito.cuoredinapoli.net_files/style.css">
+  <script src="./battito.cuoredinapoli.net_files/es5-shim.min.js"></script>
+  <script src="./battito.cuoredinapoli.net_files/es6-shim.min.js"></script>
+  <script src="./battito.cuoredinapoli.net_files/jquery.min.js"></script>
+  <script src="./battito.cuoredinapoli.net_files/bootstrap.min.js"></script>
+  <script src="./battito.cuoredinapoli.net_files/timesync.js"></script>
   <script>
-    // create a timesync client
+// create a timesync client
     var ts = timesync.create({
       server: '/timesync',
       interval: 10000
@@ -19,36 +19,49 @@
     ts.on('change', function (offset) {
       console.log('changed offset: ' + offset + ' ms');
     });
-    //get synchronized time  
+    //get synchronized time
     setInterval(function () {
       var now = new Date(ts.now());
-      var battiti = Math.floor((( ts.now() - 1543243797977)/1000)/3); 
+      var battiti = Math.floor((( ts.now() - 1543243797977)/1000)/3);
       $('#counter').html(battiti);
+      var twittCompleteUrl = "https://twitter.com/share?text=Sto%20dedicando%20il%20battito%20n.%20" + battiti + ".%0D%0ADedicalo%20anche%20tu%20su%20http://cuoredinapoli.net";
+      var fbCompleteUrl = "https://www.facebook.com/share?text=Sto%20dedicando%20il%20battito%20n.%20" + battiti + ".%0D%ADedicalo%20anche%20tu%20su%20http://cuoredinapoli.net";
+      var waCompleteUrl = "https://api.whatsapp.com/send?text=Ti%20sto%20dedicando%20il%20battito%20n.%20" + battiti + ".%0D%0ADedicalo%20anche%20tu%20su%20http://cuoredinapoli.net";
+
+
+      $("#donotwit").attr('href', twittCompleteUrl)
+      $("#donofb").attr('href', fbCompleteUrl)
+      $("#donowa").attr('href', waCompleteUrl)
+
       if(now.getSeconds()%3!=0){
         $('#cover').addClass('beat');
       }
       else{
         $('#cover').removeClass('beat');
       }
+
     }, 1);
+
   </script>
   </head>
 
   <body>
 
-<div id="cover"></div>
+<div id="cover" class="beat"></div>
 <div id="battito">
-    <h2><span id="counter"></span></h2>
+    <h2><span id="counter">52501</span></h2>
   <div id="social-icons">
-    <a href="https://www.facebook.com/share?text=battito n 1" onclick="return !window.open(this.href, 'Facebook', 'width=500,height=500')"><img src="img/FB.svg" width="30px" alt="Facebook"></a>
-  <a href="https://twitter.com/share?text=battito n 1" onclick="return !window.open(this.href, 'Twitter', 'width=500,height=500')" target="_blank"><img src="img/TW.svg" width="30px" alt="Twitter" /></img></a>
-  <a href="https://web.whatsapp.com//send?text=Ti dedico un battito #CUOREDINAPOLI" onclick="return !window.open(this.href, 'Whatsapp', 'width=500,height=500')" target="_blank"><img src="img/WA.svg" width="30px" alt="Whatsapp" /></img></a>
+      <p id="test"></p>
+    <a id="donofb" href="#" onclick="return !window.open(this.href, &#39;Facebook&#39;, &#39;width=500,height=500&#39;)"><img src="./battito.cuoredinapoli.net_files/FB.svg" width="30px" alt="Facebook"></a>
+  <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="./battito.cuoredinapoli.net_files/TW.svg" width="30px" alt="Twitter"></a>
+  <a id="donowa" href="#" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="./battito.cuoredinapoli.net_files/WA.svg" width="30px" alt="Whatsapp"></a>
 </div>
 </div>
-</body>
-</html>
 
 
 
 
 
+
+
+</body></html>
