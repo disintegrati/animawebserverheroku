@@ -46,3 +46,12 @@ h2 {
 #social-icons{
 	text-align:center;
   }
+
+	.privacy h1{
+		color: #ed1f24;
+		text-align:center;
+		font-family: "Montserrat", Arial, sans-serif;
+	}
+ .privacy p {color: #ffffff;
+	 font-family: "Montserrat", Arial, sans-serif;
+}
