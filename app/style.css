@@ -60,6 +60,7 @@ h2 {
 
 #dedica {
 	color:white;
-	text-align: center;
+    text-align: center;
+    text-justify: center;
 	font-size: 15px;
 }
