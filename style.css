@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+html, body {
+	background-color: black;
+}
+#battito {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+.beat {
+	background-color: #ed1f24;
+	animation: heartbeat 2000ms ease-in-out 0s normal;
+}
+ @keyframes heartbeat {
+ 7.46% {
+ opacity: 1;
+}
+ 14.17% {
+ opacity: 0;
+}
+ 25.36% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+}
+}
+#cover {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+h2, #counter {
+	text-align: center;
+	font-size: 40px;
+}
+h2 {
+	color: white;
+	font-size: 24px;
+}
+
+#social-icons{
+	text-align:center;
+  }
+
+	.privacy h1{
+		color: #ed1f24;
+		text-align:center;
+		font-family: "Montserrat", Arial, sans-serif;
+	}
+ .privacy p {color: #ffffff;
+	 font-family: "Montserrat", Arial, sans-serif;
+	 text-align:center;
+}
+
+#dedica {
+	color:white;
+    text-align: center;
+    text-justify: center;
+	font-size: 15px;
+}
