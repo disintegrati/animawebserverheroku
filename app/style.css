@@ -58,10 +58,10 @@ h2 {
 	 text-align:center;
 }
 
-#dedica {
+#dedica, #didascalia {
 	color:white;
-    text-align: center; 
-    text-justify: center;
+  text-align: center; 
+  text-justify: center;
 	font-size: 12px;
 }
 
