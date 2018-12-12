@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/timesync/timesync.js"></script>
+
+    <script>
+    // create a timesync client
+    var ts = timesync.create({
+      server: '/timesync',
+      interval: 10000
+    });
+    // get notified on changes in the offset
+    ts.on('change', function (offset) {
+      console.log('changed offset: ' + offset + ' ms');
+    });
+    //get synchronized time
+    setInterval(function () {
+      var now = new Date(ts.now());
+      var battiti = Math.floor((( ts.now() - 1544893201000)/1000)/3);
+      $('#counter').html(battiti);
+    }, 1);
+    </script>
+</head>
+
+<body>
+    <div id="counter">
+    </div>  
+</body>
+
+</html>
+
+
