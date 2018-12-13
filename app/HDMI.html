@@ -21,10 +21,14 @@
       var now = new Date(ts.now());
       var battiti = Math.floor((( ts.now() - 1544893201000)/1000)/3);
 //      $('#counter').html(battiti);
-$('#counter').html(Math.floor((math.random()*123456789) +1));
-    textFit(document.querySelector("#counter"), {alignHoriz: true, alignVert: true});
+//    textFit(document.querySelector("#counter"), {alignHoriz: true, alignVert: true});
 
     }, 1);
+ setInterval(function(){
+$('#counter').html(Math.floor((Math.random()*123456789) +1));
+textFit(document.querySelector("#counter"), {alignHoriz: true, alignVert: true});
+ }, 500);
+
     </script>
 
 <style>
