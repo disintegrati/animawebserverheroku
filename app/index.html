@@ -76,8 +76,8 @@ $("#donofb").click(function() {
     });
     //get synchronized time
     setInterval(function () {
-      var now = new Date(ts.now());
-      var battiti = Math.floor((( ts.now() - 1544893201000)/1000)/3);
+      var now = new Date(ts.now());          
+      var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);   
       $('#counter').html(battiti);
 
       
@@ -102,9 +102,14 @@ $("#donofb").click(function() {
       if(now.getSeconds()%3!=0){
         $('#cover').addClass('beat');
         if(battiti<0){
-          $('#dedica').html('');
+          $('#dedica').hide();
           $('#didascalia').html("<center>battiti #CUOREDINAPOLI all'accensione del Webfaro</center>");
-          $('#social-icons').html('');
+          $('#social-icons').hide();
+        }
+        else{
+          $('#dedica').show();
+          $('#didascalia').html("<center>di #CUOREDINAPOLI</center>");
+          $('#social-icons').show();
         }
       }
       else{
