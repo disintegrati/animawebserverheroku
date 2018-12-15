@@ -19,7 +19,7 @@
     //get synchronized time
     setInterval(function () {
       var now = new Date(ts.now());
-      var battiti = Math.floor((( ts.now() - 1544894101000 )/1000)/3);
+      var battiti = Math.floor((( ts.now() - 1544893201000)/1000)/3);
       $('#counter').html(battiti);
     textFit(document.querySelector("#counter"), {alignHoriz: true, alignVert: true});
 
