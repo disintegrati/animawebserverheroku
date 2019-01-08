@@ -1,6 +1,18 @@
  <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39186908-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39186908-6');
+  </script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta charset="UTF-8">
 
@@ -23,7 +35,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/timesync/timesync.js"></script>
     <script>
-
+var battiti;
 var overTitle = "test";
 var overLink = "http://battito.cuoredinapoli.net";
 var overDesc = "Un sentimento è più bello se condiviso.";
@@ -76,16 +88,16 @@ $("#donofb").click(function() {
     });
     //get synchronized time
     setInterval(function () {
-      var now = new Date(ts.now());          
-      var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);   
+      var now = new Date(ts.now());
+      var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);
       $('#counter').html(battiti);
 
-      
+
         var twittCompleteUrl = "https://twitter.com/intent/tweet?text=Sto%20dedicando%20il%20battito%20n.%20" + battiti + ".%0D%0ADedicalo%20anche%20tu%20su%20http://cuoredinapoli.net";
       var fbCompleteUrl = "https://www.facebook.com/sharer/sharer.php?u=battito.cuoredinapoli.net?b=" + battiti ;
       var waCompleteUrl = "https://wa.me/?text=Un%20sentimento%20è%20più%20bello%20se%20condiviso.%20Ti%20dedico%20il%20battito%20" + battiti + ".%20Condividine%20uno%20anche%20tu%20da%20http://cuoredinapoli.net";
-      
-      
+
+
 
 
 
@@ -116,7 +128,7 @@ $("#donofb").click(function() {
         $('#cover').removeClass('beat');
       }
     }, 1);
-    
+
 
 
 
@@ -125,6 +137,7 @@ $("#donofb").click(function() {
 
 
     </script>
+
 
 
 
@@ -151,7 +164,7 @@ $("#donofb").click(function() {
             <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/TW.svg" width="30px" alt="Twitter"></a>
             <a id="donowa" href="#" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/WA.svg" width="30px" alt="Whatsapp"></a>
         </div>
-    </div>  
+    </div>
 <script>
 
 
@@ -174,7 +187,38 @@ function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, o
 	});
 }
 </script>
+
+<script type="text/javascript">
+document.getElementById("donofb").addEventListener("click", function(){
+  var numeroBat = $('#counter').html();
+  gtag('event', 'Condivisione', {
+    'event_category': "Facebook",
+    'event_label': numeroBat
+  });
+  console.log(numeroBat);
+});
+
+document.getElementById("donotwit").addEventListener("click", function(){
+  var numeroBat = $('#counter').html();
+  gtag('event', 'Condivisione', {
+    'event_category': "Twitter",
+    'event_label': numeroBat
+  });
+  console.log(numeroBat);
+});
+
+document.getElementById("donowa").addEventListener("click", function(){
+  var numeroBat = $('#counter').html();
+  gtag('event', 'Condivisione', {
+    'event_category': "Whatsapp",
+    'event_label': numeroBat
+  });
+  console.log(numeroBat);
+});
+
+
+
+
+</script>
 </body>
 </html>
-
-
