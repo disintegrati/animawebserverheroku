@@ -1,0 +1,31 @@
+.instaCuore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: $red;
+    & svg{
+        width: 350px;
+    }
+
+    & .st0{
+        fill: $red;
+    }
+    
+    & p{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .instaCuore{
+        & svg{
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

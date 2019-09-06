@@ -1,0 +1,341 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.259753,
+                    40.850117,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Trattoria Don Vincenzo"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.292941,
+                    40.858990,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Viaggia quasi gratis"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.268476,
+                    40.868075, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "I'm CASO"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.257916,
+                    40.851696, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "B&B le ortensie"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.268330,
+                    40.910571, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "La Cantina di Carmine"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.255401,
+                    40.850403, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Gino e Totò Sorbillo"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.222215,
+                    40.843169, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Puok Vol. 1"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.246402,
+                    40.855931, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Starita"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.256834,
+                    40.850904, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria I Decumani"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.256302,
+                    40.843963, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Il Pomodorino"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.244042,
+                    40.855875, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria I Due Re"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.254743,
+                    40.848767, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Bar San Domenico"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.251864,
+                    40.849589, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Caffè dell'Epoca"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.256408,
+                    40.855890, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Infinity Cafè"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.270082,
+                    40.860661, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Sofia"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.270057,
+                    40.860403, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pasticceria Poderico Napolitano"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.246281,
+                    40.841364, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Tabaccheria"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.259536,
+                    40.848781, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "La Figlia del Presidente"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.262127,
+                    40.859357, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "A Figlia d'o Marinaro"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.247536,
+                    40.841963, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Trattoria Da Nennella"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.253112,
+                    40.857438, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Poppella"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.252126,
+                    40.857443, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Concettina ai Tre Santi"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.260619,
+                    40.850127, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizzeria Il Miracolo"
+            }
+        },
+		{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    14.267271,
+                    40.851169, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Pizza è Coccos"
+            }
+        }
+    ]
+}

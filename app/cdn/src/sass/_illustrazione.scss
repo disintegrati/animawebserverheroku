@@ -1,0 +1,59 @@
+
+#illustrazione {
+    height: 100vh;
+    width: 100%;
+    z-index: -999;
+    position: relative;
+    //overflow: hidden;
+    & .livello{
+        position: absolute;
+        bottom: -1.5%; // cambiare su larghezza ridotta e settare a 1%; 
+        width: 100%;
+    } 
+
+    & img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+}
+
+#battito{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    height: auto;
+    width: 100%;
+    color: $red;
+    font-weight: 900;
+    & #counter{
+        font-size: 3em;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #battito{
+        position: static;
+        transform: translate(0,0);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

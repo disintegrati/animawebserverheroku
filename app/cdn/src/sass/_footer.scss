@@ -1,0 +1,74 @@
+.footer{
+    &__container{
+        margin-top: 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            font-family: 'helsinkiregular';
+            font-size: 34px;
+            width: 250px;
+            & img{
+                width: 100%;
+            }
+
+            &__list{
+                text-align: center;
+                li {
+                    margin-top: 13px;
+                }
+                img{
+                    height: 34px;
+                }
+            }
+        }
+
+        
+    }
+
+    &__logos{
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        &__section{
+            & img{
+                margin: 8px;
+                height: 34px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+}
+  
+@media (min-width: 992px) {
+    .footer{
+        &__container{
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__logos{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+  
+@media (min-width: 1200px) {
+}
+
+
+footer{
+    background:white;
+}
