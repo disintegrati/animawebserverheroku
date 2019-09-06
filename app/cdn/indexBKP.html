@@ -8,21 +8,118 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.8.0/rellax.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-  <script src="/timesync/timesync.js"></script>
+  <style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+
+  #illustrazione {
+  	height: 100vh;
+  	width: 100%;
+  	z-index: -999;
+  	position: relative
+  }
+
+  #illustrazione .livello {
+  	position: absolute;
+  	bottom: -1.5%;
+  	width: 100%
+  }
+
+  #illustrazione img {
+  	width: 100%;
+  	-o-object-fit: cover;
+  	object-fit: cover;
+  	-o-object-position: center bottom;
+  	object-position: center bottom
+  }
+
+  #battito {
+  	position: absolute;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	transform: translateY(-50%);
+  	text-align: center;
+  	height: auto;
+  	width: 100%;
+  	color: #c62828;
+  	font-weight: 900
+  }
+
+  #battito #counter {
+  	font-size: 3em
+  }
+
+  @media (min-width:768px) {
+  	#battito {
+  		position: static;
+  		-webkit-transform: translate(0);
+  		transform: translate(0);
+  		height: 25vh;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center
+  	}
+  }
+
+  @font-face {
+  	font-family: helsinkiregular;
+  	src: url(https://battito.cuoredinapoli.net/src/fonts/helsinki-webfont.woff) format("woff");
+  	font-weight: 400;
+  	font-style: normal
+  }
+
+  body {
+  	font-family: Roboto, sans-serif;
+  	color: #1d1d1d
+  }
 
 
-</head>
+  .hideAnimation {
+  	-webkit-transform: scale(0);
+  	transform: scale(0);
+  	opacity: 0;
+  	overflow: hidden
+  }
 
-<body>
-  <div id="cover"></div>
-  <div id="battito">
-      <div class="container-battito">
-          <div id="dedica">Dedica il battito</div>
-          <div id="counter">1234567890</div>
-          <div id="didascalia">di #CUOREDINAPOLI</div>
-      </div>
-  </div>
+  .blur {
+  	-webkit-filter: blur(2px) brightness(.5);
+  	filter: blur(2px) brightness(.5)
+  }
+
+  .beat {
+  	-webkit-animation: heartbeat 2s ease-in-out 0s normal;
+  	animation: heartbeat 2s ease-in-out 0s normal
+  }
+
+  @-webkit-keyframes heartbeat {
+  	7.46% {
+  		opacity: 1
+  	}
+  	14.17% {
+  		opacity: 0
+  	}
+  	25.36% {
+  		opacity: 1
+  	}
+  	to {
+  		opacity: 0
+  	}
+  }
+
+  @keyframes heartbeat {
+  	7.46% {
+  		opacity: 1
+  	}
+  	14.17% {
+  		opacity: 0
+  	}
+  	25.36% {
+  		opacity: 1
+  	}
+  	to {
+  		opacity: 0
+  	}
+  }
+</style>
   <div id='illustrazione'>
         <div class='livello rellax' data-rellax-speed='-7'><img src='src/png/2.png'></div>
     <div class='livello rellax' data-rellax-speed='-5'><img src='src/png/3.png'></div>
@@ -3290,7 +3387,7 @@
   <script>
   // create a timesync client
   var ts = timesync.create({
-    server: '/timesync',
+    server: 'https:///timesync',
     interval: 10000
   });
   // get notified on changes in the offset
