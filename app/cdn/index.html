@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39186908-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39186908-6');
+  </script>
+  <meta property="fb:app_id" content="575939839496604" />
+  <meta property="og:url" content="http://battito.cuoredinapoli.net">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Battito del #CUOREDINAPOLI">
+  <meta property="og:description" content="Un sentimento è più bello se condiviso.">
+  <meta property="og:image" content="http://battito.cuoredinapoli.net/img/fb.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>#CUOREDINAPOLI</title>
@@ -152,6 +171,7 @@ shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg)
   		})
   	},
   	function (response) {
+      console.log("overrided");
   	// Action after response
   	});
   }
