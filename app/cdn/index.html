@@ -31,10 +31,7 @@
   <script src="/timesync/timesync.js"></script>
   <script>
 var battiti;
-var overTitle = "test";
-var overLink = "http://battito.cuoredinapoli.net";
-var overDesc = "Un sentimento è più bello se condiviso.";
-var overrImg = "http://battito.cuoredinapoli.net/img/fb.jpg";
+
 
       $(document).ready(function() {
       window.fbAsyncInit = function() {
@@ -59,11 +56,11 @@ var overrImg = "http://battito.cuoredinapoli.net/img/fb.jpg";
 
 
 
-$("#donofb").click(function() {
+/*$("#donofb").click(function() {
 
 shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg)
 });
-
+*/
        });
   </script>
 
@@ -99,9 +96,28 @@ shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg)
 
 
           overTitle = "Sto dedicando il battito n. "+ battiti;
-          shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg);
 
   }, 1);
+
+function shareOnFB(){
+  var url = '';
+  var title = '';
+  var description = '';
+  var image = '';
+  title = "Sto dedicando il battito n. "+ battiti;
+  description = "Un sentimento è più bello se condiviso.";
+  image = "http://battito.cuoredinapoli.net/img/fb.jpg";
+  url = "http://battito.cuoredinapoli.net";
+
+  shareOverrideOGMeta(url,
+						title,
+						description,
+						image);
+
+	return false;
+}
+
+
 
   </script>
 
@@ -119,7 +135,7 @@ shareOverrideOGMeta(overLink, overTitle, overDesc, overrImg)
       <div id="social-icons">
           <p id="test"></p>
         <!--  <a id="donofb" href="#" onclick="return !window.open(this.href, &#39;Facebook&#39;, &#39;width=500,height=500&#39;)"><img src="img/FB.svg" width="30px" alt="Facebook"></a>-->
-          <a id="donofb" href="#"><img src="img/FB.svg" width="30px" alt="Facebook"></a>
+          <a id="donofb" href="#" onclick="return shareOverrideOGMeta();"><img src="img/FB.svg" width="30px" alt="Facebook"></a>
           <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/TW.svg" width="30px" alt="Twitter"></a>
           <a id="donowa" href="#" data-action="share/whatsapp/share" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/WA.svg" width="30px" alt="Whatsapp"></a>
       </div>
