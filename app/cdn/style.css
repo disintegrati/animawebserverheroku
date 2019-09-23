@@ -25,6 +25,11 @@
 	}
 }
 
+#social-icons{
+	text-align:center;
+  }
+
+
 #illustrazione {
 	height: 100vh;
 	width: 100%;
@@ -68,11 +73,16 @@
 		-webkit-transform: translate(0);
 		transform: translate(0);
 		height: 25vh;
-		display: flex;
+		display: block;
 		justify-content: center;
 		align-items: center
 	}
 }
+
+
+.container-battito {margin-bottom: 30px; }
+#social-icons a {margin:0 5px;}
+
 
 @font-face {
 	font-family: helsinkiregular;
