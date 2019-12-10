@@ -45,9 +45,13 @@ h2 {
 }
 
 #social-icons{
-	text-align:center;
-  }
+  text-align:center;
+  margin-top: 10px;
+}
 
+#social-icons a{
+  margin: 0 8px;
+}
 	.privacy h1{
 		color: #ed1f24;
 		text-align:center;
