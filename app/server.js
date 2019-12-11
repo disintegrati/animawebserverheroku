@@ -13,7 +13,7 @@ console.log('Server listening at http://localhost:' + PORT);
 // serve static pages
 app.get('/', express.static(__dirname));
 
-app.get('/cuoreStatus', (req, res) => {
+app.get('/getStatus', (req, res) => {
     return res.send({checkStatus});
 });
 
