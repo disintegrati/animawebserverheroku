@@ -10,6 +10,12 @@ var app = express();
 app.listen(PORT);
 console.log('Server listening at http://localhost:' + PORT);
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 // serve static pages
 app.get('/', express.static(__dirname));
 
