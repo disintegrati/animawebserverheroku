@@ -24,11 +24,20 @@ app.get('/getStatus', (req, res) => {
     return res.send({checkStatus});
 });
 
-app.get('/setStatus', (req, res) => {
+app.get('/controlPanic', (req, res) => {
     checkStatus = !checkStatus;
     return res.send({checkStatus});
 });
 
+app.get('/setStatusTrue', (req, res) => {
+    checkStatus = true;
+    return res.send({checkStatus});
+});
+
+app.get('/setStatusFalse', (req, res) => {
+    checkStatus = false;
+    return res.send({checkStatus});
+});
 
 var publicDir = require('path').join(__dirname);
 app.use(express.static(publicDir));
