@@ -3,7 +3,7 @@ var timesyncServer = require('../server');
 
 var PORT = process.env.PORT || 3000;
 
-var checkStatus = false; 
+var checkStatus = true; 
 
 // create an express app
 var app = express();
@@ -21,21 +21,6 @@ app.get('/', express.static(__dirname));
 
 
 app.get('/getStatus', (req, res) => {
-    return res.send({checkStatus});
-});
-
-app.get('/controlPanic', (req, res) => {
-    checkStatus = !checkStatus;
-    return res.send({checkStatus});
-});
-
-app.get('/setStatusTrue', (req, res) => {
-    checkStatus = true;
-    return res.send({checkStatus});
-});
-
-app.get('/setStatusFalse', (req, res) => {
-    checkStatus = false;
     return res.send({checkStatus});
 });
 
