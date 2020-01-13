@@ -18,7 +18,7 @@ app.use(function(req, res, next) {
 
 // serve static pages
 app.get('/', express.static(__dirname));
-
+app.get('/en', express.static(__dirname + '/en'));
 
 app.get('/getStatus', (req, res) => {
     return res.send({checkStatus});
