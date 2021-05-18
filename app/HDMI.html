@@ -10,7 +10,7 @@
     // create a timesync client
     var ts = timesync.create({
       server: '/timesync',
-      interval: 200000
+      interval: 500000
     });
     // get notified on changes in the offset
     ts.on('change', function (offset) {
