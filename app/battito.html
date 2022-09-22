@@ -91,7 +91,6 @@ $("#donofb").click(function() {
       var now = new Date(ts.now());
       //var Sound = new Audio('battito.wav');
       var Sound = document.getElementById("mySound");
-      Sound.autoplay = true;
       var counter = 0;
       var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);
       $('#counter').html(battiti);
@@ -115,7 +114,7 @@ $("#donofb").click(function() {
 
 
 
-
+      console.log('sono fuori' , counter);
       if((now.getSeconds()%3==1 && counter==0)){
         counter=1;
         $('#cover').addClass('beat');
@@ -123,9 +122,11 @@ $("#donofb").click(function() {
           //Sound.play();
           Sound.load();
           console.log(Sound.autoplay);
+          console.log('sono dentro' , counter);
           //music.play('./battito.wav');
           Sound.onended = function() {
             counter=0;
+            console.log('sono uscito' , counter);
           };
         if(battiti<0){
           $('#dedica').hide();
