@@ -115,13 +115,15 @@ $("#donofb").click(function() {
 
 
 
-      if((now.getSeconds()%3==1 && counter==0)){
+      if((now.getSeconds()%3==1 && counter==0) function(){
         counter=1;
         $('#cover').addClass('beat');
         //var music = new Sound();
-        function playVid() {
-          Sound.play();
-        }
+        Sound.autoplay = true;
+        Sound.load();
+        function checkAutoplay() { 
+          alert(Sound.autoplay);
+        } 
         //music.play('./battito.wav');
         Sound.onended = function() {
           counter=0;
@@ -136,7 +138,7 @@ $("#donofb").click(function() {
           $('#didascalia').html("<center>di #CUOREDINAPOLI</center>");
           $('#social-icons').show();
         }
-      }
+      })
       else{
         $('#cover').removeClass('beat');
       }
