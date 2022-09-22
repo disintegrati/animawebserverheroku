@@ -118,9 +118,9 @@ $("#donofb").click(function() {
       console.log('sono fuori' , counter);
       if((now.getSeconds()%3==1 && counter==0)){
         counter=1;
+        Sound.play();
         $('#cover').addClass('beat');
         //var music = new Sound();
-          Sound.play();
           //Sound.load();
 
           console.log('sono dentro' , counter);
