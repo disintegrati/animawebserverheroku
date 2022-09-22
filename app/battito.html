@@ -90,7 +90,7 @@ $("#donofb").click(function() {
     setInterval(function () {
       var now = new Date(ts.now());
       //var Sound = new Audio('battito.wav');
-      var Sound = document.getElementById("battito.wav");
+      var Sound = document.getElementById("mySound");
       var counter = 0;
       var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);
       $('#counter').html(battiti);
@@ -175,6 +175,10 @@ $("#donofb").click(function() {
             <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/TWW.svg" width="25px" alt="Twitter"></a>
             <a id="donowa" href="#" data-action="share/whatsapp/share" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/WAW.svg" width="25px" alt="Whatsapp"></a>
         </div>
+        <sound id="mySound">
+          <source src="battito.wav" type="video/wav">
+          Your browser does not support HTML5 video.
+        </audio>
     </div>
 <script>
 
