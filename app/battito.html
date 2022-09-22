@@ -89,7 +89,7 @@ $("#donofb").click(function() {
     //get synchronized time
     setInterval(function () {
       var now = new Date(ts.now());
-      var Sound = require('aplay');
+      var Sound = require('node-aplay');
       var counter = 0;
       var battiti = Math.floor((( ts.now() - 1544894101000)/1000)/3);
       $('#counter').html(battiti);
