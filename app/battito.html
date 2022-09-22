@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 
@@ -120,7 +120,7 @@ $("#donofb").click(function() {
         //var music = new Sound();
         Sound.play();
         //music.play('./battito.wav');
-        Sound.on('complete', function(){
+        Sound.addEventListener('ended' function(){
           counter=0;
         });	
         if(battiti<0){
