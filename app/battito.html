@@ -119,9 +119,11 @@ $("#donofb").click(function() {
         counter=1;
         $('#cover').addClass('beat');
         //var music = new Sound();
-        Sound.autoplay = true;
-        Sound.load();
-        function checkAutoplay() { 
+        function() { 
+          vid.autoplay = true;
+          vid.load();
+        }
+        function() { 
           alert(Sound.autoplay);
         } 
         //music.play('./battito.wav');
