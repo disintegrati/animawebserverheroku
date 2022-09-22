@@ -119,13 +119,11 @@ $("#donofb").click(function() {
         counter=1;
         $('#cover').addClass('beat');
         //var music = new Sound();
-        (function(){
           Sound.play();
           //music.play('./battito.wav');
           Sound.onended = function() {
             counter=0;
           };
-        });
         if(battiti<0){
           $('#dedica').hide();
           $('#didascalia').html("<center>battiti #CUOREDINAPOLI all'accensione del Webfaro</center>");
@@ -175,8 +173,7 @@ $("#donofb").click(function() {
             <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/TWW.svg" width="25px" alt="Twitter"></a>
             <a id="donowa" href="#" data-action="share/whatsapp/share" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/WAW.svg" width="25px" alt="Whatsapp"></a>
         </div>
-        
-        <audio id="mySound" controls>
+        <audio id="mySound" controls autoplay>
           <source src="battito.ogg" type="audio/ogg">
           <source src="battito.wav" type="audio/wav">
         Your browser does not support the audio element.
