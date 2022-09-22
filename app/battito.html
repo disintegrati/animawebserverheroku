@@ -119,11 +119,13 @@ $("#donofb").click(function() {
         counter=1;
         $('#cover').addClass('beat');
         //var music = new Sound();
+        $(document).function(){
         Sound.play();
         //music.play('./battito.wav');
         Sound.onended = function() {
           counter=0;
-        };	
+        };
+      }
         if(battiti<0){
           $('#dedica').hide();
           $('#didascalia').html("<center>battiti #CUOREDINAPOLI all'accensione del Webfaro</center>");
