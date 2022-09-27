@@ -42,6 +42,10 @@ html, body {
 }
 .play p{
   color: white;
+  text-align: center;
+}
+.play img{
+  cursor: pointer;
 }
 #cover {
 	position: fixed;
