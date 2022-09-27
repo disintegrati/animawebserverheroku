@@ -167,6 +167,7 @@ $("#donofb").click(function() {
 
 </head>
 <body>
+    <div id="player" class="play" onclick="soundon()"><img src="img/play.png" width="50px"><p>Premi play e ascolta il battito<br> del city brand #CUOREDINAPOLI</p></div>
     <div id="cover" class="beat"></div>
     <div id="battito">
         <h3><span id="dedica"> <center>Dedica il battito </center></span></h3>
@@ -178,12 +179,16 @@ $("#donofb").click(function() {
             <a id="donotwit" href="#" onclick="return !window.open(this.href, &#39;Twitter&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/TWW.svg" width="25px" alt="Twitter"></a>
             <a id="donowa" href="#" data-action="share/whatsapp/share" onclick="return !window.open(this.href, &#39;Whatsapp&#39;, &#39;width=500,height=500&#39;)" target="_blank"><img src="img/WAW.svg" width="25px" alt="Whatsapp"></a>
         </div>
-        <audio id="mySound" controls>
+        <audio id="mySound" autoplay>
           <source src="battito.wav" type="audio/wav">
         </audio>
     </div>
 <script>
-
+var x = document.getElementById("mySound"); 
+function playAudio() { 
+x.play(); 
+jQuery('.play').hide();
+} 
 
 function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
 {
