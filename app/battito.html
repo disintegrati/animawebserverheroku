@@ -122,12 +122,9 @@ $("#donofb").click(function() {
         $('#cover').addClass('beat');
         //var music = new Sound();
           //Sound.load();
-
-          console.log('sono dentro' , counter);
           //music.play('./battito.wav');
           Sound.onended = function() {
             counter=0;
-            console.log('sono uscito' , counter);
           };
         if(battiti<0){
           $('#dedica').hide();
